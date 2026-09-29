@@ -1,0 +1,352 @@
+version: kb_v2
+source: expert_seed
+
+work_taxonomy:
+  excavation:
+    name: Разработка котлована / грунта
+    observability: DIRECT
+    aliases:
+      - котлован
+      - разработка котлована
+      - разработка грунта
+      - земляные работы
+      - земляные
+      - excavation
+      - excavate
+      - выемка грунта
+  backfill:
+    name: Засыпка траншей и котлованов
+    observability: DIRECT
+    aliases:
+      - засыпка траншей
+      - засыпка котлованов
+      - засыпка траншей и котлованов
+      - обратная засыпка
+      - backfill
+  soil_haulage:
+    name: Вывоз грунта
+    observability: DIRECT
+    aliases:
+      - вывоз грунта
+      - вывоз
+      - haulage
+      - soil haul
+      - вывозка
+  concrete_pouring:
+    name: Бетонирование
+    observability: DIRECT
+    aliases:
+      - бетонирование
+      - бетонир
+      - concrete pouring
+      - заливка бетона
+      - бетонные работы
+      - укладка бетона
+  grading:
+    name: Планировка
+    observability: DIRECT
+    aliases:
+      - планировка
+      - grading
+      - выравнивание
+      - вертикальная планировка
+  demolition:
+    name: Демонтаж
+    observability: INDIRECT
+    aliases:
+      - демонтаж
+      - разборка
+      - dismantling
+  utilities:
+    name: Прокладка сетей / трубопроводов
+    observability: INDIRECT
+    aliases:
+      - прокладка трубопроводов
+      - прокладка кабельной
+      - прокладка воздуховодов
+      - устройство лотков
+      - изоляция трубопроводов
+  installation:
+    name: Монтаж оборудования / конструкций
+    observability: INDIRECT
+    aliases:
+      - монтаж
+      - установка вентиляторов
+      - монтаж радиаторов
+      - монтаж сантехники
+      - монтаж заземления
+      - установка гпм
+      - установка зонтов
+      - установка решеток
+  facade:
+    name: Фасадные работы
+    observability: INDIRECT
+    aliases:
+      - фасад
+      - облицовка фасад
+  roofing:
+    name: Кровельные работы
+    observability: INDIRECT
+    aliases:
+      - кровл
+      - крышн
+  formwork:
+    name: Опалубочные работы
+    observability: INDIRECT
+    aliases:
+      - опалуб
+  rebar:
+    name: Арматурные работы
+    observability: INDIRECT
+    aliases:
+      - арматур
+  interior_finish:
+    name: Внутренняя отделка
+    observability: NOT_OBSERVABLE
+    aliases:
+      - облицовка гкл
+      - облицовка плиткой
+      - окрашивание
+      - оштукатуривание
+      - штукатурка оконных
+      - шпатлевание
+      - устройство полов
+      - устройство стяжек
+      - устройство покрытий мозаичных
+      - гидроизоляц
+      - устройство оконных блоков
+      - мебелировка
+  structural:
+    name: Конструкции / стены / усиление
+    observability: INDIRECT
+    aliases:
+      - усиление стен
+      - устройство стен и перегородок
+      - устройство потолков
+      - несущих конструкций
+      - техническое обследование
+  landscaping:
+    name: Благоустройство
+    observability: INDIRECT
+    aliases:
+      - озеленение
+      - устройство дорог и тротуаров
+      - установка маф
+  commissioning:
+    name: Пусконаладка / ИИ
+    observability: NOT_OBSERVABLE
+    aliases:
+      - ии лифта
+      - ии овкв
+      - ии скс
+      - ии скуд
+      - ии сот
+      - ии узла учета
+      - ии электрооборудования
+      - гидроиспытания
+  documentation:
+    name: Документы / согласования / проектирование
+    observability: NOT_OBSERVABLE
+    aliases:
+      - разрешение
+      - согласование
+      - договор
+      - конкурс
+      - экспертиза
+      - проектная документация
+      - рабочая документация
+      - дизайн-проект
+      - изыскания
+      - проектно-изыскательские
+      - заключение о соответствии
+      - мобилизация
+      - поставка
+      - ордер
+
+equipment_taxonomy:
+  excavator:
+    name: Экскаватор
+    cv_aliases: [excavator]
+  dump_truck:
+    name: Самосвал
+    cv_aliases: [dump_truck, dump truck]
+  truck_unknown:
+    name: Грузовик (класс не уточнён)
+    cv_aliases: [truck, trailer, gazelle, tanker]
+  vehicle_unknown:
+    name: Транспорт (не уточнён)
+    cv_aliases: [vehicle]
+  equipment_unknown:
+    name: Техника/объект (не уточнён)
+    cv_aliases: [machinery, cleaning_equipment]
+  crane_unknown:
+    name: Кран (тип не уточнён)
+    cv_aliases: [crane]
+  concrete_mixer:
+    name: Автобетоносмеситель
+    cv_aliases: [concrete_mixer, mixer, concrete mixer]
+  concrete_pump:
+    name: Бетононасос
+    cv_aliases: [concrete_pump, pump, concrete pump]
+  bulldozer:
+    name: Бульдозер
+    cv_aliases: [bulldozer]
+  grader:
+    name: Грейдер
+    cv_aliases: [grader]
+  roller:
+    name: Каток
+    cv_aliases: [roller, road_roller]
+  loader:
+    name: Погрузчик
+    cv_aliases: [loader, wheel_loader, front_loader]
+  forklift:
+    name: Вилочный погрузчик
+    cv_aliases: [forklift]
+  telehandler:
+    name: Телескопический погрузчик
+    cv_aliases: [telehandler]
+  mobile_crane:
+    name: Автокран
+    cv_aliases: [mobile_crane]
+  loader_crane:
+    name: Кран-манипулятор
+    cv_aliases: [loader_crane, crane_manipulator]
+  person:
+    name: Человек
+    cv_aliases: [person, worker]
+
+rules:
+  - work_type: excavation
+    equipment_type: excavator
+    theta: 0.85
+    necessity: typical
+    source: expert_seed
+  - work_type: excavation
+    equipment_type: dump_truck
+    theta: 0.70
+    necessity: possible
+    source: expert_seed
+  - work_type: excavation
+    equipment_type: truck_unknown
+    theta: 0.25
+    necessity: possible
+    source: expert_seed
+  - work_type: excavation
+    equipment_type: bulldozer
+    theta: 0.40
+    necessity: possible
+    source: expert_seed
+  - work_type: excavation
+    equipment_type: grader
+    theta: 0.20
+    necessity: possible
+    source: expert_seed
+
+  - work_type: backfill
+    equipment_type: excavator
+    theta: 0.55
+    necessity: possible
+    source: expert_seed
+  - work_type: backfill
+    equipment_type: dump_truck
+    theta: 0.60
+    necessity: possible
+    source: expert_seed
+  - work_type: backfill
+    equipment_type: bulldozer
+    theta: 0.50
+    necessity: possible
+    source: expert_seed
+  - work_type: backfill
+    equipment_type: loader
+    theta: 0.45
+    necessity: possible
+    source: expert_seed
+
+  - work_type: soil_haulage
+    equipment_type: dump_truck
+    theta: 0.88
+    necessity: typical
+    source: expert_seed
+  - work_type: soil_haulage
+    equipment_type: truck_unknown
+    theta: 0.30
+    necessity: possible
+    source: expert_seed
+  - work_type: soil_haulage
+    equipment_type: excavator
+    theta: 0.55
+    necessity: possible
+    source: expert_seed
+
+  - work_type: concrete_pouring
+    equipment_type: concrete_mixer
+    theta: 0.90
+    necessity: typical
+    source: expert_seed
+  - work_type: concrete_pouring
+    equipment_type: concrete_pump
+    theta: 0.75
+    necessity: typical
+    source: expert_seed
+
+  - work_type: grading
+    equipment_type: bulldozer
+    theta: 0.80
+    necessity: typical
+    source: expert_seed
+  - work_type: grading
+    equipment_type: roller
+    theta: 0.70
+    necessity: typical
+    source: expert_seed
+  - work_type: grading
+    equipment_type: loader
+    theta: 0.45
+    necessity: possible
+    source: expert_seed
+
+  - work_type: demolition
+    equipment_type: excavator
+    theta: 0.50
+    necessity: possible
+    source: expert_seed
+  - work_type: demolition
+    equipment_type: loader
+    theta: 0.35
+    necessity: possible
+    source: expert_seed
+
+  - work_type: utilities
+    equipment_type: excavator
+    theta: 0.40
+    necessity: possible
+    source: expert_seed
+  - work_type: utilities
+    equipment_type: truck_unknown
+    theta: 0.25
+    necessity: possible
+    source: expert_seed
+
+  - work_type: installation
+    equipment_type: mobile_crane
+    theta: 0.45
+    necessity: possible
+    source: expert_seed
+  - work_type: installation
+    equipment_type: crane_unknown
+    theta: 0.30
+    necessity: possible
+    source: expert_seed
+  - work_type: installation
+    equipment_type: loader_crane
+    theta: 0.35
+    necessity: possible
+    source: expert_seed
+
+joint_equipment_patterns:
+  - name: excavator_dump_truck_pair
+    equipment: [excavator, dump_truck]
+    boost_work_types: [excavation, soil_haulage, backfill]
+    boost: 0.12

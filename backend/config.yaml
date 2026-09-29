@@ -1,0 +1,157 @@
+storage:
+  data_dir: ../data
+  frames_dir: ../data/frames
+  uploads_dir: ../data/uploads
+  overlays_dir: ../data/overlays
+  database_path: ../data/plansight.db
+
+detector:
+  backend: yolo
+  model: ../models/yolo11s_combined_v1_best.pt
+  # опциональный запасной путь к весам (локальная разработка); в Docker не нужен
+  model_fallback: ""
+  # 1280: лучше recall мелкой/дальней техники на широких кадрах стройки (см. CV_MODEL.md)
+  imgsz: 1280
+  max_det: 150
+  confidence_threshold: 0.28
+  mapping_version: classmap_v2_strict
+  class_confidence:
+    default: 0.28
+    excavator: 0.30
+    dump_truck: 0.40
+    truck_unknown: 0.45
+    vehicle_unknown: 0.45
+    equipment_unknown: 0.40
+    crane_unknown: 0.30
+    mobile_crane: 0.30
+    loader_crane: 0.30
+    concrete_mixer: 0.40
+    concrete_pump: 0.40
+    loader: 0.32
+    bulldozer: 0.32
+    roller: 0.35
+    forklift: 0.40
+    telehandler: 0.40
+    grader: 0.35
+  # P0-A: запрещены silent upgrades truck→dump_truck, grader→bulldozer, crane→mobile_crane
+  class_map:
+    excavator: excavator
+    dump truck: dump_truck
+    dump_truck: dump_truck
+    truck: truck_unknown
+    trailer: truck_unknown
+    gazelle: truck_unknown
+    tanker: truck_unknown
+    vehicle: vehicle_unknown
+    machinery: equipment_unknown
+    cleaning_equipment: equipment_unknown
+    concrete mixer: concrete_mixer
+    mixer: concrete_mixer
+    concrete_mixer: concrete_mixer
+    concrete pump: concrete_pump
+    concrete_pump: concrete_pump
+    pump: concrete_pump
+    loader: loader
+    wheel_loader: loader
+    front_loader: loader
+    forklift: forklift
+    telehandler: telehandler
+    bulldozer: bulldozer
+    grader: grader
+    roller: roller
+    road_roller: roller
+    crane: crane_unknown
+    mobile_crane: mobile_crane
+    crane_manipulator: loader_crane
+    tower_crane: mobile_crane
+    person: person
+    hard_hat: ppe_hard_hat
+    mask: ppe_mask
+    no_hard_hat: ppe_no_hard_hat
+    no_mask: ppe_no_mask
+    no_safety_vest: ppe_no_safety_vest
+    safety_cone: safety_cone
+    safety_vest: ppe_safety_vest
+
+knowledge_base:
+  path: knowledge/kb_v1.yaml
+
+engine:
+  version: "plansight-engine-v2"
+  activity_mode: heuristic_v2  # heuristic_v2 | probabilistic_v2 (последний только после разметки)
+  calendar:
+    epsilon: 0.05
+    p_max: 0.85
+    tau_start_hours: 24.0
+    tau_finish_hours: 24.0
+    use_sigmoid: true
+    prior_inside: 0.80
+    prior_before: 0.25
+    prior_after: 0.35
+    grace_hours: 12.0
+  quality:
+    blur_min: 18.0
+    brightness_min: 18.0
+    brightness_max: 245.0
+    contrast_min: 5.0
+    observability_full: 1.0
+    observability_degraded: 0.55
+    observability_unusable: 0.0
+  activity:
+    min_score_keep: 0.12
+    active_threshold: 0.45
+    strong_threshold: 0.65
+    # heuristic_v2 feature weights (bounded, NOT likelihood ratios)
+    w_calendar: 0.25
+    w_equipment: 0.45
+    w_joint: 0.15
+    w_observability: 0.10
+    w_temporal: 0.05
+    unknown_equipment_factor: 0.35  # truck_unknown слабее dump_truck
+  episode:
+    # gap = max(camera.expected_interval_sec * gap_intervals, min_gap_seconds)
+    gap_intervals: 1.5
+    min_gap_seconds: 300
+    composition_change_iou: 0.3
+    repeat_decay: 0.35
+  temporal:
+    transition:
+      NOT_STARTED: {NOT_STARTED: 0.70, ACTIVE: 0.28, PAUSED: 0.01, COMPLETED: 0.01}
+      ACTIVE: {NOT_STARTED: 0.02, ACTIVE: 0.75, PAUSED: 0.18, COMPLETED: 0.05}
+      PAUSED: {NOT_STARTED: 0.02, ACTIVE: 0.35, PAUSED: 0.55, COMPLETED: 0.08}
+      COMPLETED: {NOT_STARTED: 0.01, ACTIVE: 0.05, PAUSED: 0.04, COMPLETED: 0.90}
+    emission_active_boost: 0.55
+    min_frames_for_start: 2
+    min_frames_for_pause: 2
+    likely_finish_requires_process_change: true
+    # Δt bins (seconds) scale transition toward identity for short gaps
+    dt_short_sec: 300
+    dt_medium_sec: 1200
+    dt_long_sec: 3600
+  matching:
+    top_n: 5
+    unmatched_floor: 0.12
+    sequence_min_pred_activity: 0.35
+    ambiguous_delta: 0.08
+    location_unknown_penalty: 0.35
+    accept_min_raw_score: 0.30
+    accept_min_margin: 0.10
+    accept_max_unmatched_weight: 0.45
+    before_days: 7
+    after_days: 7
+  deviations:
+    late_start_grace_hours: 6.0
+    early_start_hours: 6.0
+    work_after_plan_hours: 2.0
+    min_activity_for_deviation: 0.45
+    min_coverage_frames: 2
+    min_coverage_in_window: 2
+
+api:
+  host: 127.0.0.1
+  port: 8010
+  cors_origins:
+    - http://127.0.0.1:5175
+    - http://localhost:5175
+    - http://127.0.0.1:5173
+    - http://localhost:5173
