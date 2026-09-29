@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "description": "Технологические правила связей видов работ (ЛТЦ / CanonicalWork). Без правила — без предложения связи.",
+  "rules": [
+    {
+      "id": "kotlovan-svai",
+      "predecessor_aliases": ["устройство котлована", "котлован", "разработка котлована", "выемка грунта котлована"],
+      "successor_aliases": ["устройство свай", "сваи", "свайное основание", "устройство свайного основания", "буронабивные сваи", "устройство свайного фундамента"],
+      "relation": "FS",
+      "lag_mode": "calendar_fs",
+      "confidence": "high",
+      "requires_confirmation": false,
+      "note": "Котлован → Сваи",
+      "chain": "zero_cycle"
+    },
+    {
+      "id": "svai-rostverk",
+      "predecessor_aliases": ["устройство свай", "сваи", "свайное основание", "устройство свайного основания", "буронабивные сваи"],
+      "successor_aliases": ["ростверк", "устройство ростверка", "обвязочная балка"],
+      "relation": "FS",
+      "lag_mode": "calendar_fs",
+      "confidence": "high",
+      "requires_confirmation": false,
+      "note": "Сваи → Ростверк",
+      "chain": "zero_cycle"
+    },
+    {
+      "id": "rostverk-karkas",
+      "predecessor_aliases": ["ростверк", "устройство ростверка", "фундаментная плита", "устройство фундаментной плиты", "устройство фундамента"],
+      "successor_aliases": ["каркас", "каркас здания", "монолитный каркас", "монолитные работы выше отметки"],
+      "relation": "FS",
+      "lag_mode": "calendar_fs",
+      "confidence": "high",
+      "requires_confirmation": false,
+      "note": "Ростверк/плита → Каркас",
+      "chain": "zero_cycle"
+    },
+    {
+      "id": "karkas-kladka",
+      "predecessor_aliases": ["каркас", "каркас здания", "монолитный каркас", "монолитный каркас секция"],
+      "successor_aliases": ["кладка", "кладка наружных стен", "кладка стен наружных", "устройство стен из ячеистого бетона", "устройство стен и перегородок из кирпича"],
+      "relation": "SS",
+      "lag_mode": "calendar_ss",
+      "confidence": "medium",
+      "requires_confirmation": true,
+      "note": "Каркас → Кладка (SS + lag по датам начала)",
+      "chain": "frame_envelope"
+    },
+    {
+      "id": "svai-plita",
+      "predecessor_aliases": ["устройство свай", "сваи", "свайное основание", "устройство свайного основания"],
+      "successor_aliases": ["фундаментная плита", "устройство фундаментной плиты", "устройство монолитной ж/б фундаментной плиты"],
+      "relation": "FS",
+      "lag_mode": "calendar_fs",
+      "confidence": "medium",
+      "requires_confirmation": true,
+      "note": "Сваи → Фундаментная плита",
+      "chain": "zero_cycle"
+    },
+    {
+      "id": "plita-karkas",
+      "predecessor_aliases": ["фундаментная плита", "устройство фундаментной плиты", "устройство монолитной ж/б фундаментной плиты"],
+      "successor_aliases": ["каркас", "каркас здания", "монолитный каркас", "монолитные работы выше отметки"],
+      "relation": "FS",
+      "lag_mode": "calendar_fs",
+      "confidence": "high",
+      "requires_confirmation": false,
+      "note": "Плита → Каркас",
+      "chain": "zero_cycle"
+    },
+    {
+      "id": "kladka-okna",
+      "predecessor_aliases": ["кладка", "кладка наружных стен", "кладка стен наружных", "устройство стен из ячеистого бетона"],
+      "successor_aliases": ["монтаж окон", "окна", "заполнение оконных проёмов"],
+      "relation": "SS",
+      "lag_mode": "calendar_ss",
+      "confidence": "medium",
+      "requires_confirmation": true,
+      "note": "Кладка → Окна",
+      "chain": "frame_envelope"
+    },
+    {
+      "id": "okna-fasad",
+      "predecessor_aliases": ["монтаж окон", "окна", "заполнение оконных проёмов"],
+      "successor_aliases": ["устройство фасада", "фасад", "вентилируемого навесного фасада", "навесного фасада"],
+      "relation": "SS",
+      "lag_mode": "calendar_ss",
+      "confidence": "medium",
+      "requires_confirmation": true,
+      "note": "Окна → Фасад",
+      "chain": "frame_envelope"
+    }
+  ]
+}
