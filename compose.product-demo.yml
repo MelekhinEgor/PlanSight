@@ -1,0 +1,15 @@
+# PlanSight product-demo override.
+# Usage:
+#   docker compose -f docker-compose.yml -f compose.product-demo.yml up -d --build
+#
+# Ставит предзагруженный снимок product_demo/ в volume ТОЛЬКО если /data/plansight.db ещё нет.
+
+services:
+  api:
+    environment:
+      PLANSIGHT_INIT_MODE: product_examples
+      PLANSIGHT_PRODUCT_DEMO_DIR: /app/product_demo
+    command: >
+      sh -c "PLANSIGHT_DATABASE_PATH=/data/plansight.db python scripts/docker_demo_init.py
+      && python -c \"from app.db.models import init_db; from app.db.migrate import ensure_schema_patches; init_db(); ensure_schema_patches()\"
+      && uvicorn app.main:app --host 0.0.0.0 --port 8010 --workers 1 --limit-concurrency 20"
