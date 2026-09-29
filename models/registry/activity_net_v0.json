@@ -1,0 +1,14 @@
+{
+  "model_id": "activity_net_v0",
+  "status": "NOT_TRAINED",
+  "production_engine": "heuristic_v2",
+  "swapped_into_production": false,
+  "artifact": null,
+  "note": "CatBoost/multi-label ActivityNet не обучен. В проде только heuristic_v2 (uncalibrated_score). Expert feedback → кандидаты в dataset, не автоподмена модели.",
+  "required_before_train": [
+    "object/camera/date grouped splits",
+    "zone-time window features",
+    "ground-truth multi-label work types",
+    "calibration separate from ranking"
+  ]
+}

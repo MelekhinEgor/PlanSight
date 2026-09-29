@@ -1,0 +1,38 @@
+{
+  "model_id": "yolo11s_combined_v1",
+  "dataset": "cvlab_synthetic_fixture",
+  "trained_on_leaked_frames": false,
+  "n_frames": 10,
+  "per_class": {
+    "dump_truck": {
+      "precision": null,
+      "recall": 0.0,
+      "ap50": null,
+      "fixture_class_match": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "note": "Not YOLO AP50 — fixture class presence vs cached Detection rows",
+      "ap50_95": null
+    },
+    "excavator": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "ap50": null,
+      "fixture_class_match": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "note": "Not YOLO AP50 — fixture class presence vs cached Detection rows",
+      "ap50_95": null
+    }
+  },
+  "latency_ms": {
+    "n": 10,
+    "mean": 0.7450300152413547,
+    "note": "SQL Detection lookup — not YOLO inference ms"
+  },
+  "note": "Fixture self-check only. Do not publish as YOLO Precision/Recall/AP50.",
+  "status": "FIXTURE_SELF_CHECK",
+  "publishable_as_yolo_metrics": false
+}

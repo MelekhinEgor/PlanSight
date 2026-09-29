@@ -1,0 +1,40 @@
+{
+  "model_id": "yolo11s_combined_v1",
+  "kind": "detector",
+  "framework": "ultralytics",
+  "weights_path": "models/yolo11s_combined_v1_best.pt",
+  "weights_sha256": "f2f736aadb5878b93806380cd11ea1f1074513176e2cd8440fd41b5be0a1882f",
+  "trained_on_leaked_frames": false,
+  "eval": {
+    "status": "FIXTURE_SELF_CHECK",
+    "artifact": "models/registry/yolo11s_combined_v1_eval.json",
+    "publishable_as_yolo_metrics": false,
+    "note": "Not YOLO metrics — fixture self-check; ap50 forced null",
+    "per_class": {
+      "dump_truck": {
+        "precision": null,
+        "recall": 0.0,
+        "ap50": null,
+        "fixture_class_match": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "ap50_95": null
+      },
+      "excavator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "ap50": null,
+        "fixture_class_match": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "ap50_95": null
+      }
+    }
+  },
+  "thresholds": {
+    "default_conf": 0.25,
+    "calibration_artifact": null
+  }
+}
