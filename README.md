@@ -294,6 +294,6 @@ PlanSight/
 <div align="center">
   <h3>PlanSight — от наблюдения к проверяемому решению</h3>
   <p>Компьютерное зрение × строительный график × экспертная проверка</p>
-  <p><a href="http://plansight.ru"><strong>plansight.ru ↗</strong></a> · <a href="docs/README.md">Документация</a> · <a href="#быстрый-старт">Запустить проект</a></p>
+  <p><a href="http://plansight.ru"><strong>plansight.ru ↗</strong></a> · <a href="https://disk.yandex.ru/d/el1a-EikvakXhg">Документация</a> · <a href="#быстрый-старт">Запустить проект</a></p>
   <p><sub>Доступ к сайту может быть ограничен для подключений за пределами России.</sub></p>
 </div>
