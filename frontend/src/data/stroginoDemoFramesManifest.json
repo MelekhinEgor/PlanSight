@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "data_origin": "DEMO_STATIC",
+  "do_not_mix_with_live_data": true,
+  "project": {
+    "id": "demo-strogino",
+    "name": "Строгино — демонстрационный проект",
+    "location_label": "Строгино",
+    "location_verified": false,
+    "notice": "Изображения взяты из предоставленного набора «Строительная техника». Их принадлежность площадке Строгино не подтверждена."
+  },
+  "finding": {
+    "id": "DEMO-FND-001",
+    "title": "Проверить комплект техники",
+    "severity": "medium",
+    "display_status": "Требует проверки",
+    "summary": "В зоне земляных работ на кадрах выделена строительная техника. Проверьте, соответствует ли её состав текущей операции.",
+    "work_match": {
+      "status": "ACCEPTED",
+      "is_simulated": true,
+      "wbs": "DEMO-02.03.04",
+      "work_title": "Разработка котлована",
+      "zone_id": "DEMO-B2",
+      "display_label": "Демонстрационное сопоставление с КСГ",
+      "notice": "Это fixture для демонстрации интерфейса, а не результат анализа действующей КСГ проекта."
+    },
+    "rule": {
+      "code": "DEMO-EQP-001",
+      "name": "Состав техники в зоне земляных работ",
+      "result": "REVIEW_REQUIRED",
+      "is_simulated": true
+    },
+    "limitations": [
+      "Разметка и значения confidence смоделированы для демонстрации интерфейса; они не получены текущим inference.",
+      "Географическая привязка исходных фотографий к Строгино не подтверждена.",
+      "Время 10:30 и 10:35 — условное время демонстрационного сценария, а не время съёмки камеры.",
+      "Отсутствие класса техники на отдельном кадре не доказывает отсутствие этой техники на площадке.",
+      "Межкадровый tracking и идентификация одной и той же машины не выполнялись; количества между кадрами не суммировать."
+    ]
+  },
+  "frames": [
+    {
+      "frame_id": "DEMO-FRAME-STR-001",
+      "source_archive_file": "Строительная_техника/Screenshot_12.png",
+      "source_file": "strogino_demo_frame_01_source.png",
+      "annotated_file": "strogino_demo_frame_01_annotated_reference.png",
+      "source_visible_date": "14.09.2023",
+      "scenario_time_label": "10:30 · время демонстрационного сценария",
+      "camera_id": "DEMO-CAM-02",
+      "camera_label": "Виртуальная камера 02 · демо",
+      "zone_id": "DEMO-B2",
+      "zone_label": "Зона B2",
+      "control_zone": {
+        "id": "DEMO-ZONE-B2-F1",
+        "label": "Зона B2",
+        "legend": "Зона контроля",
+        "geometry_origin": "MANUAL_DEMO_POLYGON",
+        "geometry_notice": "Полигон задан вручную для демонстрации интерфейса; не является геодезическим контуром площадки.",
+        "polygon_norm": [
+          [0.02, 0.42],
+          [0.28, 0.36],
+          [0.52, 0.38],
+          [0.78, 0.40],
+          [0.99, 0.46],
+          [0.99, 0.78],
+          [0.72, 0.92],
+          [0.35, 0.95],
+          [0.08, 0.82],
+          [0.01, 0.58]
+        ]
+      },
+      "detections": [
+        {
+          "id": "DEMO-DET-001",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "confidence": 0.94,
+          "bbox_px": [
+            65,
+            390,
+            175,
+            105
+          ],
+          "color_key": "excavator",
+          "bbox_norm": {
+            "x": 0.053366,
+            "y": 0.482673,
+            "width": 0.143678,
+            "height": 0.12995
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-002",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "confidence": 0.89,
+          "bbox_px": [
+            455,
+            330,
+            125,
+            165
+          ],
+          "color_key": "excavator",
+          "bbox_norm": {
+            "x": 0.373563,
+            "y": 0.408416,
+            "width": 0.102627,
+            "height": 0.204208
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-003",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "confidence": 0.96,
+          "bbox_px": [
+            565,
+            370,
+            245,
+            230
+          ],
+          "color_key": "excavator",
+          "bbox_norm": {
+            "x": 0.463875,
+            "y": 0.457921,
+            "width": 0.201149,
+            "height": 0.284653
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-004",
+          "class": "tower_crane",
+          "label_ru": "Башенный кран",
+          "confidence": 0.98,
+          "bbox_px": [
+            255,
+            70,
+            410,
+            345
+          ],
+          "color_key": "tower_crane",
+          "bbox_norm": {
+            "x": 0.20936,
+            "y": 0.086634,
+            "width": 0.336617,
+            "height": 0.42698
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-005",
+          "class": "wheel_construction_equipment",
+          "label_ru": "Колёсная строительная машина",
+          "confidence": 0.79,
+          "bbox_px": [
+            1028,
+            365,
+            186,
+            90
+          ],
+          "color_key": "wheel_machine",
+          "bbox_norm": {
+            "x": 0.844007,
+            "y": 0.451733,
+            "width": 0.152709,
+            "height": 0.111386
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        }
+      ],
+      "width": 1218,
+      "height": 808
+    },
+    {
+      "frame_id": "DEMO-FRAME-STR-002",
+      "source_archive_file": "Строительная_техника/Screenshot_13.png",
+      "source_file": "strogino_demo_frame_02_source.png",
+      "annotated_file": "strogino_demo_frame_02_annotated_reference.png",
+      "source_visible_date": "14.09.2023",
+      "scenario_time_label": "10:35 · время демонстрационного сценария",
+      "camera_id": "DEMO-CAM-03",
+      "camera_label": "Виртуальная камера 03 · демо",
+      "zone_id": "DEMO-B2",
+      "zone_label": "Зона B2",
+      "control_zone": {
+        "id": "DEMO-ZONE-B2-F2",
+        "label": "Зона B2",
+        "legend": "Зона контроля",
+        "geometry_origin": "MANUAL_DEMO_POLYGON",
+        "geometry_notice": "Полигон задан вручную для демонстрации интерфейса; не является геодезическим контуром площадки.",
+        "polygon_norm": [
+          [0.04, 0.40],
+          [0.30, 0.36],
+          [0.55, 0.38],
+          [0.82, 0.40],
+          [0.99, 0.45],
+          [0.99, 0.88],
+          [0.65, 0.96],
+          [0.30, 0.95],
+          [0.05, 0.78],
+          [0.02, 0.55]
+        ]
+      },
+      "detections": [
+        {
+          "id": "DEMO-DET-006",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "confidence": 0.93,
+          "bbox_px": [
+            115,
+            315,
+            420,
+            210
+          ],
+          "color_key": "excavator",
+          "bbox_norm": {
+            "x": 0.09434,
+            "y": 0.388409,
+            "width": 0.344545,
+            "height": 0.25894
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-007",
+          "class": "wheel_loader",
+          "label_ru": "Фронтальный погрузчик",
+          "confidence": 0.95,
+          "bbox_px": [
+            575,
+            390,
+            250,
+            325
+          ],
+          "color_key": "wheel_loader",
+          "bbox_norm": {
+            "x": 0.471698,
+            "y": 0.480888,
+            "width": 0.205086,
+            "height": 0.40074
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        },
+        {
+          "id": "DEMO-DET-008",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "confidence": 0.91,
+          "bbox_px": [
+            1020,
+            305,
+            199,
+            200
+          ],
+          "color_key": "excavator",
+          "bbox_norm": {
+            "x": 0.836751,
+            "y": 0.376079,
+            "width": 0.163249,
+            "height": 0.246609
+          },
+          "confidence_type": "SIMULATED_DEMO_VALUE",
+          "track_id": null
+        }
+      ],
+      "width": 1219,
+      "height": 811
+    }
+  ]
+}

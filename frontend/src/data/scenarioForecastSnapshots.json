@@ -1,0 +1,68 @@
+{
+  "note": "Согласованные снимки прогресса для расчёта calculateScheduleImpact по сценариям Строгино (конкурсный показ).",
+  "scenarios": {
+    "equipment-composition": {
+      "source": "scheduleDelayPlus8Fixture",
+      "plannedFinish": "2027-01-22",
+      "asOfDate": "2027-01-02",
+      "currentProgressPercent": 72,
+      "dailyProgressPercentagePoints": 1,
+      "progressSnapshots": [
+        {
+          "date": "2027-01-01",
+          "progressPercent": 71,
+          "source": "scenario_progress_record"
+        },
+        {
+          "date": "2027-01-02",
+          "progressPercent": 72,
+          "source": "scenario_progress_record"
+        }
+      ],
+      "expectedImpactDays": 8,
+      "expectedForecastFinish": "2027-01-30"
+    },
+    "pile-foundation": {
+      "plannedFinish": "2026-11-25",
+      "asOfDate": "2026-10-19",
+      "currentProgressPercent": 51,
+      "dailyProgressPercentagePoints": 1,
+      "progressSnapshots": [
+        {
+          "date": "2026-10-18",
+          "progressPercent": 50,
+          "source": "scenario_progress_record"
+        },
+        {
+          "date": "2026-10-19",
+          "progressPercent": 51,
+          "source": "scenario_progress_record"
+        }
+      ],
+      "expectedImpactDays": 12,
+      "expectedForecastFinish": "2026-12-07",
+      "contextNote": "Свайные работы: снимок прогресса на дату среза относительно плана завершения буронабивных свай"
+    },
+    "haulage-tempo": {
+      "plannedFinish": "2026-11-15",
+      "asOfDate": "2026-10-19",
+      "currentProgressPercent": 63,
+      "dailyProgressPercentagePoints": 1,
+      "progressSnapshots": [
+        {
+          "date": "2026-10-18",
+          "progressPercent": 62,
+          "source": "scenario_progress_record"
+        },
+        {
+          "date": "2026-10-19",
+          "progressPercent": 63,
+          "source": "scenario_progress_record"
+        }
+      ],
+      "expectedImpactDays": 10,
+      "expectedForecastFinish": "2026-11-25",
+      "contextNote": "Вывоз грунта (1.9.1.35): снимок темпа на 19.10.2026 относительно плана завершения 15.11.2026"
+    }
+  }
+}

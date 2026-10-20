@@ -1,0 +1,42 @@
+{
+  "fixtureId": "schedule-delay-plus-8d-v1",
+  "purpose": "Внутренний тест воспроизводимости расчёта прогноза",
+  "visibility": "internal_test_data",
+  "scenario": {
+    "taskId": "1.9.1.3",
+    "taskName": "Выемка грунта котлована",
+    "plannedFinish": "2027-01-22",
+    "asOfDate": "2027-01-02",
+    "dayType": "calendar_days",
+    "currentProgressPercent": 72.0,
+    "dailyProgressPercentagePoints": 1.0,
+    "remainingProgressPercent": 28.0,
+    "remainingDurationCalendarDays": 28,
+    "forecastFinish": "2027-01-30",
+    "impactDays": 8,
+    "note": "Внутренний тест формулы. Не смешивать с фактическими производственными данными.",
+    "progressSnapshots": [
+      {
+        "date": "2027-01-01",
+        "progressPercent": 71.0,
+        "source": "scenario_progress_record"
+      },
+      {
+        "date": "2027-01-02",
+        "progressPercent": 72.0,
+        "source": "scenario_progress_record"
+      }
+    ],
+    "rateCalculation": {
+      "method": "difference_between_progress_snapshots",
+      "intervalCalendarDays": 1,
+      "calculatedDailyProgressPercentagePoints": 1.0
+    }
+  },
+  "expectedAssertions": [
+    "Прогнозная дата завершения равна 2027-01-30",
+    "Прогнозное влияние на срок равно +8 календарных дней",
+    "Расчётный след содержит входные значения и версию методики",
+    "При противоречивых датах или отсутствии подтверждённого прогресса прогноз блокируется"
+  ]
+}

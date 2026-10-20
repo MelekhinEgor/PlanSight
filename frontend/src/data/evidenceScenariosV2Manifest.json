@@ -1,0 +1,905 @@
+{
+  "schema_version": 2,
+  "package_type": "STATIC_SCENARIO_FIXTURES",
+  "visible_ui_policy": {
+    "no_repeated_demo_badges": true,
+    "source_provenance_available_in_details": true,
+    "never_show_fake_confidence": true,
+    "never_claim_unverified_location": true,
+    "never_claim_real_camera_timestamp_without_metadata": true
+  },
+  "frames": {
+    "excavation-01": {
+      "id": "excavation-01",
+      "asset": "assets/excavation_01.png",
+      "source_archive_name": "Screenshot_12.png",
+      "image_width": 1218,
+      "image_height": 808,
+      "printed_date": "14.09.2023",
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "equipment-composition",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "exc-01-01",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            90,
+            380,
+            150,
+            120
+          ],
+          "bbox_norm": {
+            "x": 0.073892,
+            "y": 0.470297,
+            "width": 0.123153,
+            "height": 0.148515
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-01-02",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            485,
+            335,
+            130,
+            190
+          ],
+          "bbox_norm": {
+            "x": 0.398194,
+            "y": 0.414604,
+            "width": 0.106732,
+            "height": 0.235149
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-01-03",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            570,
+            410,
+            240,
+            230
+          ],
+          "bbox_norm": {
+            "x": 0.46798,
+            "y": 0.507426,
+            "width": 0.197044,
+            "height": 0.284653
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-01-04",
+          "class": "tower_crane",
+          "label_ru": "Башенный кран",
+          "bbox_px": [
+            255,
+            55,
+            420,
+            355
+          ],
+          "bbox_norm": {
+            "x": 0.20936,
+            "y": 0.068069,
+            "width": 0.344828,
+            "height": 0.439356
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-01-05",
+          "class": "wheel_construction_equipment",
+          "label_ru": "Колёсная строительная машина",
+          "bbox_px": [
+            995,
+            365,
+            205,
+            95
+          ],
+          "bbox_norm": {
+            "x": 0.816913,
+            "y": 0.451733,
+            "width": 0.168309,
+            "height": 0.117574
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "excavation-01-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.47
+          ],
+          [
+            0.17,
+            0.46
+          ],
+          [
+            0.34,
+            0.5
+          ],
+          [
+            0.55,
+            0.49
+          ],
+          [
+            0.77,
+            0.5
+          ],
+          [
+            1.0,
+            0.45
+          ],
+          [
+            1.0,
+            0.83
+          ],
+          [
+            0.78,
+            0.89
+          ],
+          [
+            0.52,
+            0.93
+          ],
+          [
+            0.25,
+            0.91
+          ],
+          [
+            0.0,
+            0.84
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    },
+    "excavation-02": {
+      "id": "excavation-02",
+      "asset": "assets/excavation_02.png",
+      "source_archive_name": "Screenshot_13.png",
+      "image_width": 1219,
+      "image_height": 811,
+      "printed_date": "14.09.2023",
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "equipment-composition",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "exc-02-01",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            60,
+            340,
+            440,
+            210
+          ],
+          "bbox_norm": {
+            "x": 0.049221,
+            "y": 0.419236,
+            "width": 0.360952,
+            "height": 0.25894
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-02-02",
+          "class": "wheel_loader",
+          "label_ru": "Фронтальный погрузчик",
+          "bbox_px": [
+            455,
+            420,
+            255,
+            245
+          ],
+          "bbox_norm": {
+            "x": 0.373257,
+            "y": 0.517879,
+            "width": 0.209188,
+            "height": 0.302096
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "exc-02-03",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            1050,
+            330,
+            169,
+            160
+          ],
+          "bbox_norm": {
+            "x": 0.861362,
+            "y": 0.406905,
+            "width": 0.138638,
+            "height": 0.197287
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "excavation-02-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.46
+          ],
+          [
+            0.18,
+            0.47
+          ],
+          [
+            0.38,
+            0.51
+          ],
+          [
+            0.62,
+            0.51
+          ],
+          [
+            0.83,
+            0.49
+          ],
+          [
+            1.0,
+            0.45
+          ],
+          [
+            1.0,
+            0.84
+          ],
+          [
+            0.76,
+            0.91
+          ],
+          [
+            0.48,
+            0.93
+          ],
+          [
+            0.2,
+            0.9
+          ],
+          [
+            0.0,
+            0.82
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    },
+    "pile-works-01": {
+      "id": "pile-works-01",
+      "asset": "assets/pile_works_01.png",
+      "source_archive_name": "Screenshot_80.png",
+      "image_width": 1220,
+      "image_height": 811,
+      "printed_date": "18.10.2023",
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "pile-foundation",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "pile-01-01",
+          "class": "pile_drilling_rig",
+          "label_ru": "Буровая установка",
+          "bbox_px": [
+            620,
+            0,
+            600,
+            750
+          ],
+          "bbox_norm": {
+            "x": 0.508197,
+            "y": 0.0,
+            "width": 0.491803,
+            "height": 0.924784
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "pile-01-02",
+          "class": "wheel_loader",
+          "label_ru": "Фронтальный погрузчик",
+          "bbox_px": [
+            250,
+            455,
+            175,
+            125
+          ],
+          "bbox_norm": {
+            "x": 0.204918,
+            "y": 0.561036,
+            "width": 0.143443,
+            "height": 0.154131
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "pile-01-03",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            955,
+            345,
+            175,
+            165
+          ],
+          "bbox_norm": {
+            "x": 0.782787,
+            "y": 0.425401,
+            "width": 0.143443,
+            "height": 0.203453
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "pile-works-01-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.51
+          ],
+          [
+            0.25,
+            0.51
+          ],
+          [
+            0.45,
+            0.54
+          ],
+          [
+            0.67,
+            0.52
+          ],
+          [
+            1.0,
+            0.55
+          ],
+          [
+            1.0,
+            0.88
+          ],
+          [
+            0.7,
+            0.93
+          ],
+          [
+            0.4,
+            0.91
+          ],
+          [
+            0.14,
+            0.87
+          ],
+          [
+            0.0,
+            0.83
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    },
+    "pile-works-02": {
+      "id": "pile-works-02",
+      "asset": "assets/pile_works_02.png",
+      "source_archive_name": "Screenshot_81.png",
+      "image_width": 1219,
+      "image_height": 814,
+      "printed_date": "18.10.2023",
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "pile-foundation",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "pile-02-01",
+          "class": "pile_drilling_rig",
+          "label_ru": "Буровая установка",
+          "bbox_px": [
+            690,
+            10,
+            520,
+            740
+          ],
+          "bbox_norm": {
+            "x": 0.566038,
+            "y": 0.012285,
+            "width": 0.426579,
+            "height": 0.909091
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "pile-02-02",
+          "class": "pile_drilling_rig",
+          "label_ru": "Буровая установка",
+          "bbox_px": [
+            310,
+            70,
+            200,
+            560
+          ],
+          "bbox_norm": {
+            "x": 0.254307,
+            "y": 0.085995,
+            "width": 0.164069,
+            "height": 0.687961
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "pile-works-02-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.52
+          ],
+          [
+            0.22,
+            0.52
+          ],
+          [
+            0.43,
+            0.55
+          ],
+          [
+            0.64,
+            0.54
+          ],
+          [
+            1.0,
+            0.58
+          ],
+          [
+            1.0,
+            0.9
+          ],
+          [
+            0.72,
+            0.94
+          ],
+          [
+            0.4,
+            0.91
+          ],
+          [
+            0.12,
+            0.87
+          ],
+          [
+            0.0,
+            0.82
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    },
+    "haulage-01": {
+      "id": "haulage-01",
+      "asset": "assets/haulage_01.png",
+      "source_archive_name": "Screenshot_99.png",
+      "image_width": 1216,
+      "image_height": 813,
+      "printed_date": null,
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "haulage-tempo",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "haul-01-01",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            0,
+            180,
+            540,
+            400
+          ],
+          "bbox_norm": {
+            "x": 0.0,
+            "y": 0.221402,
+            "width": 0.444079,
+            "height": 0.492005
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-01-02",
+          "class": "dump_truck",
+          "label_ru": "Самосвал",
+          "bbox_px": [
+            130,
+            330,
+            570,
+            310
+          ],
+          "bbox_norm": {
+            "x": 0.106908,
+            "y": 0.405904,
+            "width": 0.46875,
+            "height": 0.381304
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-01-03",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            500,
+            170,
+            650,
+            520
+          ],
+          "bbox_norm": {
+            "x": 0.411184,
+            "y": 0.209102,
+            "width": 0.534539,
+            "height": 0.639606
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-01-04",
+          "class": "concrete_mixer",
+          "label_ru": "Автобетоносмеситель",
+          "bbox_px": [
+            420,
+            330,
+            350,
+            240
+          ],
+          "bbox_norm": {
+            "x": 0.345395,
+            "y": 0.405904,
+            "width": 0.287829,
+            "height": 0.295203
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "haulage-01-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.4
+          ],
+          [
+            0.24,
+            0.38
+          ],
+          [
+            0.49,
+            0.4
+          ],
+          [
+            0.75,
+            0.41
+          ],
+          [
+            1.0,
+            0.42
+          ],
+          [
+            1.0,
+            0.84
+          ],
+          [
+            0.74,
+            0.89
+          ],
+          [
+            0.45,
+            0.88
+          ],
+          [
+            0.16,
+            0.85
+          ],
+          [
+            0.0,
+            0.78
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    },
+    "haulage-02": {
+      "id": "haulage-02",
+      "asset": "assets/haulage_02.png",
+      "source_archive_name": "Screenshot_100.png",
+      "image_width": 1220,
+      "image_height": 810,
+      "printed_date": null,
+      "camera_id": null,
+      "capture_timestamp": null,
+      "location_verified": false,
+      "scenario_id": "haulage-tempo",
+      "annotation_origin": "CURATED_STATIC_REFERENCE",
+      "inference_executed": false,
+      "detections": [
+        {
+          "id": "haul-02-01",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            560,
+            420,
+            250,
+            190
+          ],
+          "bbox_norm": {
+            "x": 0.459016,
+            "y": 0.518519,
+            "width": 0.204918,
+            "height": 0.234568
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-02-02",
+          "class": "excavator",
+          "label_ru": "Экскаватор",
+          "bbox_px": [
+            900,
+            320,
+            320,
+            230
+          ],
+          "bbox_norm": {
+            "x": 0.737705,
+            "y": 0.395062,
+            "width": 0.262295,
+            "height": 0.283951
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-02-03",
+          "class": "concrete_mixer",
+          "label_ru": "Автобетоносмеситель",
+          "bbox_px": [
+            930,
+            300,
+            290,
+            170
+          ],
+          "bbox_norm": {
+            "x": 0.762295,
+            "y": 0.37037,
+            "width": 0.237705,
+            "height": 0.209877
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        },
+        {
+          "id": "haul-02-04",
+          "class": "tower_crane",
+          "label_ru": "Башенный кран",
+          "bbox_px": [
+            450,
+            0,
+            300,
+            430
+          ],
+          "bbox_norm": {
+            "x": 0.368852,
+            "y": 0.0,
+            "width": 0.245902,
+            "height": 0.530864
+          },
+          "confidence": null,
+          "confidence_display": false,
+          "annotation_origin": "CURATED_STATIC_REFERENCE",
+          "track_id": null
+        }
+      ],
+      "zone_overlay": {
+        "id": "haulage-02-work-area",
+        "label_ru": "Область анализа",
+        "coordinate_space": "NORMALIZED_IMAGE",
+        "points": [
+          [
+            0.0,
+            0.43
+          ],
+          [
+            0.28,
+            0.42
+          ],
+          [
+            0.53,
+            0.45
+          ],
+          [
+            0.8,
+            0.46
+          ],
+          [
+            1.0,
+            0.43
+          ],
+          [
+            1.0,
+            0.83
+          ],
+          [
+            0.74,
+            0.88
+          ],
+          [
+            0.43,
+            0.86
+          ],
+          [
+            0.15,
+            0.82
+          ],
+          [
+            0.0,
+            0.76
+          ]
+        ],
+        "geometry_origin": "MANUALLY_DEFINED_FOR_SCENARIO",
+        "is_geodetic_site_boundary": false
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "id": "equipment-composition",
+      "title": "Проверить комплект техники для земляных работ",
+      "status": "NEEDS_REVIEW",
+      "evidence_frame_ids": [
+        "excavation-01",
+        "excavation-02"
+      ],
+      "suggested_work_title": "Выемка грунта котлована",
+      "matching_status": "AMBIGUOUS",
+      "rule_title": "Полнота комплекта техники на выемке грунта",
+      "rule_result": "EQUIPMENT_SET_INCOMPLETE_REQUIRES_REVIEW",
+      "reason": "На кадрах выделены экскаваторы и кран, самосвалы не выделены. Наблюдение отнесено к «Выемка грунта котлована» — ориентировочное отставание около 8 дней из‑за неполного комплекта, до подтверждения специалистом.",
+      "next_action": "Подтвердите отсутствие самосвалов на площадке и при необходимости скорректируйте прогноз сроков по строке «Выемка грунта котлована».",
+      "gantt_behavior": "HIGHLIGHT_CANDIDATES_UNTIL_MATCH_CONFIRMED",
+      "source_note": "Архивные фотографии с датой на изображении 14.09.2023; не считать их доказательством текущего состояния Строгино."
+    },
+    {
+      "id": "pile-foundation",
+      "title": "Проверить соответствие техники работам по устройству свай",
+      "status": "NEEDS_REVIEW",
+      "evidence_frame_ids": [
+        "pile-works-01",
+        "pile-works-02"
+      ],
+      "suggested_work_title": "Буронабивные сваи",
+      "matching_status": "ACCEPTED_ONLY_IF_EXPLICIT_FIXTURE_LINK_EXISTS",
+      "rule_title": "Появление буровой техники после планового старта свайных работ",
+      "rule_result": "EQUIPMENT_OBSERVED_WORK_MATCH_REQUIRES_CONTEXT",
+      "reason": "На кадрах выделены буровые установки для свайных работ; башенный кран соседнего объекта в разбор не входит. Техника появилась после плановой даты начала «Буронабивные сваи» — ориентировочное отставание около 12 дней, до подтверждения специалистом.",
+      "next_action": "Подтвердите фактический старт свайных работ и при необходимости скорректируйте прогноз сроков по строке «Буронабивные сваи».",
+      "gantt_behavior": "FOCUS_LINKED_TASK_ONLY_WHEN_LINK_IS_EXPLICIT",
+      "source_note": "Архивные фотографии с датой на изображении 18.10.2023; не считать их доказательством текущего состояния Строгино."
+    },
+    {
+      "id": "haulage-tempo",
+      "title": "Проверить темп вывоза грунта",
+      "status": "NEEDS_REVIEW",
+      "evidence_frame_ids": [
+        "haulage-01",
+        "haulage-02"
+      ],
+      "suggested_work_title": "Вывоз грунта из котлована",
+      "matching_status": "AMBIGUOUS_UNLESS_LINKED_BY_SCENARIO_DATA",
+      "rule_title": "Соответствие темпа вывоза ведущейся выемке",
+      "rule_result": "HAULAGE_TEMPO_LAG_REQUIRES_REVIEW",
+      "reason": "На кадрах выделены экскаваторы и единичный самосвал. Наблюдение отнесено к «Вывоз грунта из котлована» — ориентировочное отставание около 10 дней из‑за слабого темпа вывоза, до подтверждения специалистом.",
+      "next_action": "Подтвердите нехватку вывоза на площадке и при необходимости скорректируйте прогноз сроков по строке «Вывоз грунта из котлована».",
+      "gantt_behavior": "HIGHLIGHT_CANDIDATES_UNTIL_MATCH_CONFIRMED",
+      "source_note": "Архивные фотографии; принадлежность конкретной площадке и камере требует подтверждения."
+    }
+  ]
+}
