@@ -1,0 +1,9 @@
+# Совместимость: демо уже включено в docker-compose.yml по умолчанию.
+# Можно по-прежнему вызывать:
+#   docker compose -f docker-compose.yml -f compose.product-demo.yml up -d --build
+
+services:
+  api:
+    environment:
+      PLANSIGHT_INIT_MODE: product_examples
+      PLANSIGHT_PRODUCT_DEMO_DIR: /app/product_demo
