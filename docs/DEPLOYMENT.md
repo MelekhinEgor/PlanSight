@@ -4,8 +4,8 @@
 
 | Сервис | Порт (по умолчанию) | Роль |
 |--------|---------------------|------|
-| `web` | 5175 → 80 | UI (nginx) |
-| `api` | 8010 | FastAPI + YOLO |
+| `web` | **80** → 80 | UI (nginx), вход без порта: `http://IP/` |
+| `api` | 8010 | FastAPI + YOLO (снаружи обычно через `/api/` у web) |
 | volume `plansight_data` | — | SQLite, кадры, uploads |
 
 В образ API входит снимок `product_demo/` (~26 MB). Веса YOLO **не** в образе — файл монтируется с хоста: `./models:/models:ro`.
@@ -48,8 +48,8 @@ docker compose -f docker-compose.yml -f compose.product-demo.yml up -d --build
 
 Первая сборка может занять 5–15 минут. Дальше:
 
-- UI: http://127.0.0.1:5175  
-- API: http://127.0.0.1:8010/health  
+- UI: http://127.0.0.1/  
+- API: http://127.0.0.1/api/health  
 
 ```powershell
 docker compose -f docker-compose.yml -f compose.product-demo.yml ps
@@ -168,14 +168,14 @@ docker compose -f docker-compose.yml -f compose.product-demo.yml up -d --build
 ### Порты и проверка (Ubuntu)
 
 ```bash
-sudo ufw allow 5175/tcp
+sudo ufw allow 80/tcp
 sudo ufw allow 8010/tcp   # снаружи можно не открывать, если хватает UI
 docker compose -f docker-compose.yml -f compose.product-demo.yml ps
 curl -s http://127.0.0.1:8010/health
 docker compose -f docker-compose.yml -f compose.product-demo.yml logs --tail=80 api
 ```
 
-В браузере: `http://SERVER_IP:5175`
+В браузере: `http://SERVER_IP/`
 
 ---
 
@@ -205,11 +205,11 @@ docker compose -f docker-compose.yml -f compose.product-demo.yml up -d --build
 | Переменная | По умолчанию | Смысл |
 |------------|--------------|--------|
 | `PLANSIGHT_AI_MODE` | `template` | без Ollama |
-| `PLANSIGHT_WEB_PORT` | `5175` | порт UI на хосте |
+| `PLANSIGHT_WEB_PORT` | `80` | порт UI на хосте (без суффикса в URL) |
 | `PLANSIGHT_API_PORT` | `8010` | порт API на хосте |
 | `PLANSIGHT_RBAC` | `0` | RBAC выкл |
 | `PLANSIGHT_API_TOKEN` | пусто | опциональный токен |
 
 ## Reverse proxy (опционально)
 
-Nginx/Caddy на хосте → `http://127.0.0.1:5175`. API уже проксируется из контейнера `web` на `api:8010` по пути `/api/`.
+Nginx/Caddy на хосте → `http://127.0.0.1:80`. API уже проксируется из контейнера `web` на `api:8010` по пути `/api/`.
