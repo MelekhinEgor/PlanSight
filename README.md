@@ -7,7 +7,7 @@
   <p>От видеонаблюдения — к управленческим приоритетам: <strong>кадр, техника, задача графика, риск, доказательства и решение.</strong></p>
 
   <p>
-    <a href="https://plansight.ru"><img alt="Сайт PlanSight" src="https://img.shields.io/badge/САЙТ-plansight.ru-2679F5?style=for-the-badge" /></a>
+    <a href="http://plansight.ru"><img alt="Сайт PlanSight" src="https://img.shields.io/badge/САЙТ-plansight.ru-2679F5?style=for-the-badge" /></a>
     <a href="#быстрый-старт"><img alt="Быстрый старт" src="https://img.shields.io/badge/ЗАПУСТИТЬ-ЛОКАЛЬНО-163B5D?style=for-the-badge" /></a>
     <a href="docs/README.md"><img alt="Документация" src="https://img.shields.io/badge/ДОКУМЕНТАЦИЯ-ОТКРЫТЬ-227C87?style=for-the-badge" /></a>
   </p>
@@ -60,7 +60,7 @@ flowchart LR
     class G,H,I result;
 ```
 
-> [!IMPORTANT]
+> [!ВАЖНО]
 > **PlanSight не подменяет решение инженера.** Компьютерное зрение фиксирует наблюдение, алгоритм формирует связь с работами, а эксперт проверяет предупреждение и принимает решение с учётом материалов проекта.
 
 ### Что получает пользователь
@@ -148,7 +148,7 @@ docker compose up -d --build
 curl http://localhost:8010/health
 ```
 
-> [!NOTE]
+> [!ДОПОЛНИТЕЛЬНО]
 > Согласно базовой конфигурации, при первом запуске Docker может использовать предзагруженный набор `product_demo/`, если рабочая БД отсутствует. Повторный `docker compose up` не пересоздаёт существующую базу. Детали: [развёртывание](docs/DEPLOYMENT.md).
 
 <details>
@@ -294,6 +294,6 @@ PlanSight/
 <div align="center">
   <h3>PlanSight — от наблюдения к проверяемому решению</h3>
   <p>Компьютерное зрение × строительный график × экспертная проверка</p>
-  <p><a href="https://plansight.ru"><strong>plansight.ru ↗</strong></a> · <a href="docs/README.md">Документация</a> · <a href="#быстрый-старт">Запустить проект</a></p>
+  <p><a href="http://plansight.ru"><strong>plansight.ru ↗</strong></a> · <a href="docs/README.md">Документация</a> · <a href="#быстрый-старт">Запустить проект</a></p>
   <p><sub>Доступ к сайту может быть ограничен для подключений за пределами России.</sub></p>
 </div>
